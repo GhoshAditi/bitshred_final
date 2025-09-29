@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Monitor, Smartphone, Server } from "lucide-react"
+import Link from "next/link"
 
 export function PlatformsSection() {
   const platforms = [
@@ -9,18 +10,21 @@ export function PlatformsSection() {
       title: "Windows",
       description: "Full support for Windows 10/11 with GUI and command-line interfaces.",
       features: ["NTFS & FAT32 support", "Registry cleaning", "Recycle bin wiping"],
+      downloadUrl: "/BitshredW.exe",
     },
     {
       icon: Server,
       title: "Linux",
       description: "Native Linux support with advanced filesystem compatibility.",
       features: ["ext4, XFS, Btrfs support", "Terminal integration", "Automated scripting"],
+      downloadUrl: "/Bitshred.exe",
     },
     {
       icon: Smartphone,
       title: "Android",
       description: "Secure mobile data destruction for Android devices.",
       features: ["Internal storage wiping", "SD card cleaning", "App data removal"],
+      downloadUrl: "/downloads/bitshred-android.apk",
     },
   ]
 
@@ -57,7 +61,9 @@ export function PlatformsSection() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full mt-6">{"Download for " + platform.title}</Button>
+                <Link href={platform.downloadUrl} download>
+                  <Button className="w-full mt-6">{"Download for " + platform.title}</Button>
+                </Link>
               </CardContent>
             </Card>
           ))}

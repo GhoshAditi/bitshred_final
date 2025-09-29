@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Shield, Download, Github } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -45,14 +46,18 @@ export function HeroSection() {
 
         {/* Download Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <Link href="/BitshredW.exe" download>
           <Button size="lg" className="min-w-[200px]">
             <Download className="w-5 h-5 mr-2" />
             Windows
           </Button>
-          <Button size="lg" variant="outline" className="min-w-[200px] bg-transparent">
-            <Download className="w-5 h-5 mr-2" />
-            Linux
-          </Button>
+          </Link>          
+          <Link href="/Bitshred.exe" download>
+            <Button size="lg" variant="outline" className="min-w-[200px] bg-transparent">
+              <Download className="w-5 h-5 mr-2" />
+              Linux
+            </Button>
+          </Link>
           <Button size="lg" variant="outline" className="min-w-[200px] bg-transparent">
             <Download className="w-5 h-5 mr-2" />
             Android
@@ -61,10 +66,12 @@ export function HeroSection() {
 
         {/* GitHub Link */}
         <div className="flex justify-center">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            <Github className="w-4 h-4 mr-2" />
-            View on GitHub
-          </Button>
+          <Link href="https://github.com/0M4NU4L/BitShred" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+              <Github className="w-4 h-4 mr-2" />
+              View on GitHub
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
