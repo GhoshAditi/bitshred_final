@@ -47,21 +47,23 @@ export function HeroSection() {
         {/* Download Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Link href="/BitshredW.exe" download>
-          <Button size="lg" className="min-w-[200px]">
-            <Download className="w-5 h-5 mr-2" />
-            Windows
-          </Button>
-          </Link>          
+            <Button size="lg" className="min-w-[200px]">
+              <Download className="w-5 h-5 mr-2" />
+              Windows
+            </Button>
+          </Link>
           <Link href="/Bitshred.exe" download>
             <Button size="lg" variant="outline" className="min-w-[200px] bg-transparent">
               <Download className="w-5 h-5 mr-2" />
               Linux
             </Button>
           </Link>
-          <Button size="lg" variant="outline" className="min-w-[200px] bg-transparent">
-            <Download className="w-5 h-5 mr-2" />
-            Android
-          </Button>
+          <Link href="https://github.com/0M4NU4L/BitShred/releases/latest/download/BitshredA.apk" download>
+            <Button size="lg" variant="outline" className="min-w-[200px] bg-transparent">
+              <Download className="w-5 h-5 mr-2" />
+              Android
+            </Button>
+          </Link>
         </div>
 
         {/* GitHub Link */}

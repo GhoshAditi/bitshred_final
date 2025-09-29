@@ -24,7 +24,7 @@ export function PlatformsSection() {
       title: "Android",
       description: "Secure mobile data destruction for Android devices.",
       features: ["Internal storage wiping", "SD card cleaning", "App data removal"],
-      downloadUrl: "/downloads/bitshred-android.apk",
+      downloadUrl: "https://github.com/0M4NU4L/BitShred/releases/latest/download/BitshredA.apk",
     },
   ]
 
