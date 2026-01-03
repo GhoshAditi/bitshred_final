@@ -1,0 +1,9 @@
+# Don't ignore public directory and its contents
+!public/
+!public/**/*
+
+# Ensure executable files are included
+!public/*.exe
+!public/*.deb
+!public/*.AppImage
+!public/*.dmg

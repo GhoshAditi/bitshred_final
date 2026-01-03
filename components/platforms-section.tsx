@@ -10,14 +10,14 @@ export function PlatformsSection() {
       title: "Windows",
       description: "Full support for Windows 10/11 with GUI and command-line interfaces.",
       features: ["NTFS & FAT32 support", "Registry cleaning", "Recycle bin wiping"],
-      downloadUrl: "/BitshredW.exe",
+      downloadUrl: "/api/download/BitshredW.exe",
     },
     {
       icon: Server,
       title: "Linux",
       description: "Native Linux support with advanced filesystem compatibility.",
       features: ["ext4, XFS, Btrfs support", "Terminal integration", "Automated scripting"],
-      downloadUrl: "/Bitshred.exe",
+      downloadUrl: "/api/download/Bitshred.exe",
     },
     {
       icon: Smartphone,
